@@ -1,0 +1,70 @@
+/* App-specific styles */
+
+/* Ensure smooth transitions */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFE500;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1A1A1A;
+  border: 2px solid #FFE500;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333333;
+}
+
+/* Selection color */
+::selection {
+  background: #FF0066;
+  color: #FFFFFF;
+}
+
+/* Focus styles for accessibility */
+button:focus-visible,
+[role="tab"]:focus-visible {
+  outline: 3px solid #0066FF;
+  outline-offset: 2px;
+}
+
+/* Chart canvas optimization */
+canvas {
+  display: block;
+}
+
+/* Prevent layout shift during animation */
+.nb-card,
+.nb-chart-container {
+  will-change: transform, box-shadow;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .nb-title {
+    font-size: 2.5rem;
+  }
+  
+  .nb-header {
+    padding: 2rem 1.5rem;
+  }
+  
+  .nb-toggle-group {
+    flex-wrap: wrap;
+  }
+  
+  .nb-toggle-item {
+    flex: 1;
+    min-width: 60px;
+  }
+}
